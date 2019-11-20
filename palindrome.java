@@ -14,9 +14,9 @@ public class palindrome
             if (Character.isLetter(letter))
                 new1 += letter;
         }
-        for (int j= 0; j < new1.length();j++) {
+        for (int j= new1.length()-1; j >=0;j--) {
             char front = new1.charAt(j);
-            char back  = new1.charAt(new1.length() - 1 - j);
+            char back  = new1.charAt(new1.length() - j);
             if (front != back) return false;
         }
         return true;
